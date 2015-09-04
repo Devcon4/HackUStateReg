@@ -1,0 +1,377 @@
+<!-- HackUstate 2.0. -->
+<!-- Author: Devyn Cyphers; Devcon. -->
+
+<!-- Head. -->
+<head>
+    <title>HackUstate</title>
+    <link rel='icon' href='/favicon.ico'>
+
+    <!--
+                                                  (
+                                               #(**(
+                                              ((****(
+                                             (**** ***(
+                                   ((((    #(****   ***(  (((
+                                 ((*****((((****      ***(****(#
+                               ((*** **********         **** ***((  (((
+                         ((  ((*****    ******            ***   ***(****(&
+                       &(***(**           ****             **     ***   **(&
+                      ((*****                *                            **((
+                    ((******                                                **((((&
+           #((((((((************&                             &(********************(((((
+
+((     ((#                     ((        ***     /**             (((               #((
+((     ((#  (((((((     (((((( ((    ((( ***     /**  %(((((((  ((((((  (((((((   (((((((  #((((((
+(((((((((#        ((  (((      ((  (((   ***     /**  ((         (((          ((   #((    ((
+((     ((# (((((((((  ((#      (( (((    ***     /**  ((((((((   (((   (((((((((   #((   (((((((((
+((     ((# (((####((  (((((((( ((  #(((   **********  #####(((   ((((# (((####((    (((## ((((####
+
+            ((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
+                                     ((((((((((((((((((((((((
+
+    HackUstate! ran by hackUSU. A student organization from Utah State University.
+    -->
+
+    <!-- GPU Rasterization. -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+</head>
+
+<!-- Main Body of the site. -->
+<body>
+<!-- MLH Badge. -->
+<a id="mlh-trust-badge"
+   style="position:fixed;top:0;right:50px;max-width:100px;width:10%;min-width: 60px;display:block;z-index:10000"
+   href="https://mlh.io/?utm_campaign=Trust%20Badge" target="_blank"><img
+        src="https://s3.amazonaws.com/logged-assets/trust-badge/f2015.png" alt="MLH Official - Fall 2015"
+        style="width:100%; padding: 0;"></a>
+
+<!-- Insert Home template. -->
+{{> home}}
+</body>
+
+<!-- Home Template -->
+<!-- Contains the bulk of the site. -->
+<template name="home">
+    <div class="container">
+
+        <!-- Canvas for floating background shapes. -->
+        <!-- Can be disabled in site.js. -->
+        <canvas class="mainCanvas"></canvas>
+
+        <!-- Background color for site. -->
+        <div class="background"></div>
+
+        <div class="header"></div>
+
+        <!-- Landing -->
+        <div class="one">
+            <div class="center padTop">
+                <img src="HackUStateLogo-3%20Final2-01.png">
+                <br>
+
+                <h1>Utah's first intercollegiate hackathon! </h1>
+                <br>
+                <br>
+
+                <h3>300 students | 36 hours | 100 prizes</h3>
+                <br>
+
+                <h3>November 6 - 7 @ USU Conference Center</h3>
+                <button onclick="location.href='https://hackustate.typeform.com/to/o2JljV?typeform-welcome=0'"
+                        class="btn">Pre-Register
+                </button>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="three">
+            <div class="center">
+                <!-- Title. -->
+                <p class="white lrg">FAQ</p>
+
+                <!-- Table for FAQ data. -->
+                <div class="center table">
+                    <div class="row">
+                        <div class="column">
+                            <div class="question white">What is a hackathon?</div>
+                            <div class="answer cyan">A <a
+                                    href="https://medium.com/@alexkern/what-is-a-hackathon-c2162b893b0a" class="white sml">hackathon </a>is
+                                an event for students at all skill levels; which encourages learning new technology,
+                                collaborating with other
+                                students, and creating something mind-blowing.
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="question white">How can I register?</div>
+                            <div class="answer cyan">Pre-Register now because our seats are going fast!
+                                If you're a USU Student, you're guaranteed a seat but still need to pre-register.
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="question white">Who is invited?</div>
+                            <div class="answer cyan">All undergraduate students from any university are welcome.
+                                Non-USU students must be 18 or older. Unfortunately, high school
+                                students cannot attend.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <div class="question white">How much is it?</div>
+                            <div class="answer cyan">The event is free to all students and includes food, drinks, and a
+                                bunch
+                                of swag for the entire hackathon!
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="question white">What's the schedule?</div>
+                            <div class="answer cyan">hackUstate will begin at 8AM on Friday November 6th and end the
+                                next day
+                                around 8 PM.
+                                A more detailed schedule is provided below.
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="question white">Will there be buses?</div>
+                            <div class="answer cyan">We would like to provide buses from BYU, UVU, and UofU. In order
+                                for us
+                                to do so, we need at least 50 attendees from each school.
+                                Please contact us to find out how many hackers you need to invite and to help organize a
+                                bus for your school!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <div class="question white">What should I bring?</div>
+                            <div class="answer cyan">All attendees are required to bring their valid student ID
+                                for admission (name must match registration) and a laptop
+                                for hacking.
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="question white">Are there any rules?</div>
+                            <div class="answer cyan">USU is a dry campus (no alcohol) but we'll have lots of energy
+                                drinks!
+                                Please no firearms, knives, or weapons of any kind. Also, we expect all hackers
+                                to follow <a class="white sml" href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH's Code of
+                                    Conduct</a>.
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="question white">What food will you provide?</div>
+                            <div class="answer cyan">All meals from breakfast on Friday to Lunch on Saturday, as well as
+                                snacks in between, are covered by us.
+                                We'll try to accommodate dietary restrictions as best we can!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table center">
+                    <!-- Bottom disclaimer. -->
+                    <div class="center">
+                        <div class="question white">Other Questions?</div>
+                        <div class="answer cyan">You can get in touch with us at <a class="white sml"
+                                                                                    href="mailto:team@hackustate.org">team@hackustate.org</a>
+                            or via <a class="white sml" href="http://twitter.com/hackustate">Twitter</a>, or <a class="white sml"
+                                                                                                           href="https://www.facebook.com/Hackustate">Facebook</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schedule -->
+        <div class="two">
+            <div class="center">
+
+                <!-- Title. -->
+                <p class="white lrg">Schedule</p>
+
+                <!-- Table for schedule data. -->
+                <div class="table center">
+                    <div class="column">
+                        <div class="white">Friday</div>
+                        <div class="column">
+                            <div class="row">
+                                <div class="column right med">8 AM &nbsp;</div>
+                                <div class="column left">Registration and Breakfast</div>
+                            </div>
+                            <div class="row">
+                                <div class="column right med">9 AM &nbsp;</div>
+                                <div class="column left">Welcome and Keynote</div>
+                            </div>
+                            <div class="row">
+                                <div class="column right med">10 AM &nbsp;</div>
+                                <div class="column left">API Demos</div>
+                            </div>
+                            <div class="row">
+                                <div class="column right med">11 AM &nbsp;</div>
+                                <div class="column left">Hacking Begins</div>
+                            </div>
+                            <div class="row">
+                                <div class="column right med">1 PM &nbsp;</div>
+                                <div class="column left">Lunch</div>
+                            </div>
+                            <div class="row">
+                                <div class="column right med">6 PM &nbsp;</div>
+                                <div class="column left">Dinner</div>
+                            </div>
+                            <div class="row">
+                                <div class="column right med">12 AM &nbsp;</div>
+                                <div class="column left">Aggie Ice Cream and Pizza</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="white">Saturday</div>
+                        <div class="column">
+                            <div class="row">
+                                <div class="column right med">7 AM</div>
+                                <div class="column left">Snacks and Lightning Talks</div>
+                            </div>
+                            <div class="row">
+                                <div class="column right med">10 AM</div>
+                                <div class="column left">Snacks and Lightning Talks</div>
+                            </div>
+                            <div class="row">
+                                <div class="column right med">12 PM</div>
+                                <div class="column left">Lunch</div>
+                            </div>
+                            <div class="row">
+                                <div class="column right med">5 PM</div>
+                                <div class="column left">Dinner</div>
+                            </div>
+                            <div class="row">
+                                <div class="column right med">6 PM</div>
+                                <div class="column left">Hacking Ends and Hack Fair</div>
+                            </div>
+                            <div class="row">
+                                <div class="column right med">7 PM</div>
+                                <div class="column left">Awards</div>
+                            </div>
+                            <div class="row">
+                                <div class="column right med">8 PM</div>
+                                <div class="column left">Hackathon Ends</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sponsorship inqury. -->
+        <div class="three">
+            <div class="center">
+
+                <!-- Title. -->
+                <p class="white lrg">Sponsorship</p>
+
+                <!-- Text. -->
+                <p class="cyan">Interested in sponsoring HackUstate?</p>
+                <a href="mailto:sponsor@hackustate.org" class="cyan" style="text-decoration: none;">
+                    <!-- Only reason bootstrap in in here... -->
+                    <span class="cyan" aria-hidden="true"
+                          style="padding-left: 1px;"></span> sponsor@hackustate.org
+                </a>
+                <br>
+
+                <!-- Document buttons. -->
+                <div class="table center">
+                    <div class="column">
+                        <div onclick="location.href='Docs/Sponsorship-Prospectus-F15.pdf'" class="white btn">
+                            Sponsor Packages
+                        </div>
+                        <br>
+
+                        <div onclick="location.href='Docs/Sponsorship-Guide-F15.pdf'" class="white btn">
+                            Sponsor Guide
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Current Sponsors -->
+        <div class="one">
+            <div class="table center">
+
+                <!-- Title. -->
+                <div class="center">
+                    <div class="gray lrg">Current Sponsors</div>
+                </div>
+
+                <!-- Sponsor images. -->
+                <!-- Note: max of three images to section. -->
+                <div class="center">
+                    <div class="column">
+                        <a href="http://hackusu.org/"><img src="Sponsors/hackusu-logo.png"></a>
+                    </div>
+                    <div class="column">
+                        <a href="http://www.digitalocean.com/"><img src="Sponsors/digitalocean-logo.png"></a>
+                    </div>
+                    <div class="column">
+                        <a href="https://www.stickermule.com/unlock?ref_id=4213360701"><img src="Sponsors/stickermule-logo.png"></a>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="column">
+                        <a href="http://www.xmission.com/"><img src="Sponsors/xmission-logo.png"></a>
+                    </div>
+                    <div class="column">
+                        <a href="http://www.atomicjolt.com/"><img src="Sponsors/atomicjolt-logo.png"></a>
+                    </div>
+                    <div class="column">
+                        <a href="http://craftlakecity.com/"><img src="Sponsors/CraftLakeCity-logo.png"></a>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="column">
+                        <a href="http://www.rstudio.com/"><img src="Sponsors/RStudio-Logo-Blue-Gradient.png"></a>
+                    </div>
+                    <div class="column">
+                        <a href="http://www.lightningkite.com/"><img src="Sponsors/lk-yellow.png"></a>
+                    </div>
+                    <div class="column">
+                        <a href="http://www.namecheap.com/"><img src="Sponsors/namecheap-logo.png"></a>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="column">
+                        <a href="http://www.venmo.com/"><img src="Sponsors/venmo-blue.png"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partners. -->
+            <div class="table center">
+
+                <!-- Partners. -->
+                <div class="center">
+                    <div class="gray lrg">Partners</div>
+                </div>
+                <div class="center">
+                    <div class="column">
+                        <a href="http://www.usu.edu/"><img src="Sponsors/usu-logo.png"></a>
+                    </div>
+                    <div class="column">
+                        <a href="http://mlh.io"><img src="Sponsors/mlh-logo.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer. -->
+        <div class="footer">
+            <div class="footerB"></div>
+        </div>
+    </div>
+
+    <!-- Background scripts. -->
+    <script src="client/lib/EngineCore.js"></script>
+    <script src="client/lib/Screen.js"></script>
+</template>
